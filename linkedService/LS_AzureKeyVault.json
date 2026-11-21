@@ -1,0 +1,10 @@
+{
+	"name": "LS_AzureKeyVault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://medLake-keyVault.vault.azure.net/"
+		}
+	}
+}
