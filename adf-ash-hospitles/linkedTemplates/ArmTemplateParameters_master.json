@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-ash-hospitles"
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://medilakesa.dfs.core.windows.net/"
+		},
+		"LS_AzureDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1122-044147-6b5f9kkn"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://medLake-keyVault.vault.azure.net/"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "medlake-server.database.windows.net"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "sql-db-medLake"
+		},
+		"LS_AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "ashishdb"
+		},
+		"Ls_PostgreSql_properties_typeProperties_server": {
+			"value": "ep-damp-pine-aoiaw6rl-pooler.c-2.ap-southeast-1.aws.neon.tech"
+		},
+		"Ls_PostgreSql_properties_typeProperties_database": {
+			"value": "neondb"
+		},
+		"Ls_PostgreSql_properties_typeProperties_username": {
+			"value": "neondb_owner"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
