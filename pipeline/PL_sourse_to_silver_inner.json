@@ -119,6 +119,47 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Landing to Bronze",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Sourse_to_landing ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 2,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/mediLake-repo/MediLake-azure-databricks-repo/Landing_to_Bronze",
+					"baseParameters": {
+						"landing_timestamp": {
+							"value": "@variables('Start time')",
+							"type": "Expression"
+						},
+						"source_system": {
+							"value": "@activity('Read Table Details').output.firstRow.source_system",
+							"type": "Expression"
+						},
+						"table_name": {
+							"value": "@activity('Read Table Details').output.firstRow.bronze_table_name",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_AzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
