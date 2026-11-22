@@ -199,7 +199,7 @@
 				}
 			},
 			{
-				"name": "Status update to Sucess",
+				"name": "Status update to Sucesss",
 				"type": "Script",
 				"dependsOn": [
 					{
