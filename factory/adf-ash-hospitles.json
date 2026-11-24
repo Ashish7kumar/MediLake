@@ -1,0 +1,12 @@
+{
+	"name": "adf-ash-hospitles",
+	"properties": {
+		"globalParameters": {
+			"email_recepient": {
+				"type": "string",
+				"value": "ashish11to12@gmail.com"
+			}
+		}
+	},
+	"location": "centralindia"
+}
