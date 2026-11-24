@@ -180,6 +180,23 @@
 								],
 								"scriptBlockExecutionTimeout": "02:00:00"
 							}
+						},
+						{
+							"name": "The Gold notebook failed",
+							"type": "Fail",
+							"dependsOn": [
+								{
+									"activity": "SIlver to Gold",
+									"dependencyConditions": [
+										"Failed"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"message": "inner pipeline failed",
+								"errorCode": " 500"
+							}
 						}
 					]
 				}

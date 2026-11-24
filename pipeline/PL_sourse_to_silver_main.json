@@ -149,7 +149,7 @@
 							}
 						},
 						{
-							"name": "update Failed",
+							"name": "Silver notebook failed",
 							"type": "Fail",
 							"dependsOn": [
 								{
