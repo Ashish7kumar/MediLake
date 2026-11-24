@@ -147,6 +147,23 @@
 								],
 								"scriptBlockExecutionTimeout": "02:00:00"
 							}
+						},
+						{
+							"name": "update Failed",
+							"type": "Fail",
+							"dependsOn": [
+								{
+									"activity": "Ingest from Sourse to silver",
+									"dependencyConditions": [
+										"Failed"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"message": "inner pipeline failed",
+								"errorCode": " 500"
+							}
 						}
 					]
 				}
